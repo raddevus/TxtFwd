@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TxtFwd</string>
+    <string name="action_saveSessionPwd">Save session pwd</string>
+</resources>
