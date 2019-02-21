@@ -54,8 +54,13 @@ public class MsgReceiver extends BroadcastReceiver {
             DateFormat formatter = new SimpleDateFormat("MM/dd/yyyy - HH:mm:ss");
             String formattedDate = formatter.format(date);
             //FirebaseApp.initializeApp(context);
+            //FirebaseApp.initializeApp(context);
+            //FirebaseDatabase fbd = FirebaseDatabase.getInstance("https://txtfwd.firebaseio.com/");
             FirebaseDatabase fbd = FirebaseDatabase.getInstance();
-            DatabaseReference myFirebaseRef = fbd.getReference("https://txtfwd.firebaseio.com/demo/" + String.valueOf(mainUser.getUserId()) + "/Messages/" + from + "/");
+            String targetPath = "demo/" + String.valueOf(mainUser.getUserId()) + "/Messages/" + from + "/";
+            targetPath = targetPath.replace(".", "");
+            DatabaseReference myFirebaseRef = fbd.getReference(targetPath);
+
 
 
             myFirebaseRef.child("dateTime").setValue(formattedDate);

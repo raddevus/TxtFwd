@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "590317495955",
+    "firebase_url": "https://txtfwd.firebaseio.com",
+    "project_id": "txtfwd-51f04",
+    "storage_bucket": "txtfwd-51f04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590317495955:android:5ce40d4a76b54fa7",
+        "android_client_info": {
+          "package_name": "us.raddev.txtfwd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590317495955-idjfpv8nfej0vd1lq4tjtr8h0qm64chb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-9n-dO4TD0V0UgPt7g51hfjqG9ZGsl0M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

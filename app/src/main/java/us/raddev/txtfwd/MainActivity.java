@@ -22,6 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 
 import java.util.ArrayList;
 
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FirebaseApp.initializeApp(this);
+        FirebaseApp.initializeApp(this.getApplicationContext());
         sessionPwdEditText = (EditText) findViewById(R.id.sessionPwdEditText);
         userIdTextView = (TextView) findViewById(R.id.userIdTextView);
         isForwardOnCheckbox = (CheckBox) findViewById(R.id.isForwardOnCheckBox);
