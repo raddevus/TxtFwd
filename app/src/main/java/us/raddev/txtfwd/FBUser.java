@@ -120,8 +120,8 @@ public class FBUser {
             messageDigest.update(sessionPassword.getBytes());
             String encryptedString = encodeBytes(messageDigest.digest());
             this.sessionPassword = encryptedString;
-            FirebaseApp.initializeApp(context);
-            DatabaseReference myFirebaseRef = FirebaseDatabase.getInstance().getReference("https://txtfwd.firebaseio.com/demo/" +
+            FirebaseDatabase fbd = FirebaseDatabase.getInstance();
+            DatabaseReference myFirebaseRef = fbd.getReference("demo/" +
                     String.valueOf(userId));
 
             myFirebaseRef.child("sessionPwd").setValue(encryptedString);

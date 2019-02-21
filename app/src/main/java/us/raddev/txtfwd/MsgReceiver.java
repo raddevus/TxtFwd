@@ -90,6 +90,10 @@ public class MsgReceiver extends BroadcastReceiver {
             Log.d("MainActivity", "I'm an older API LEVEL : " + Build.VERSION.SDK_INT);
             Bundle bundle = intent.getExtras();
             Object pdus[] = (Object[]) bundle.get("pdus");
+            // the following code is deprecated and will warn but it is only used
+            // on old devices anyways so it's no problem -- it is what causes the warning
+            // when building this code.
+            // This message : txtfwd\MsgReceiver.java: uses or overrides a deprecated API.
             message = SmsMessage.createFromPdu((byte[]) pdus[0]);
         }
         return message;
